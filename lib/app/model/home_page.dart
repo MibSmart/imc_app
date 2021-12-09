@@ -14,7 +14,7 @@ class HomePage extends StatelessWidget {
             
            decoration: BoxDecoration(
               gradient: RadialGradient(
-                center: Alignment(-0.5,-0.6),
+                center: Alignment(-0.5,-0.7),
                 radius: 0.15,
                 // ignore: prefer_const_literals_to_create_immutables
                 colors: <Color>[
