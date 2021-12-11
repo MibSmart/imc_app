@@ -1,33 +1,51 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
+import 'package:imc_app/app/model/custom_wigtes.dart';
+import 'package:imc_app/app/model/data.dart';
+import 'custom_wigtes.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    int totalPages = OnboardingItems.loadOnboardingItem().length;
     return Scaffold(
-      body: Stack(
-        children: <Widget>[
-          Container(
-            
-           decoration: BoxDecoration(
-              gradient: RadialGradient(
-                center: Alignment(-0.5,-0.6),
-                radius: 0.15,
-                // ignore: prefer_const_literals_to_create_immutables
-                colors: <Color>[
-                  Color(0xFFEEEEEE),
-                  Color(0xFF111133),
+    body: PageView.builder(
+      itemCount: totalPages,
+      itemBuilder: (BuildContext context,int index){
+        OnboardingItem oi = OnboardingItems.loadOnboardingItem()[index];
+        return Container(
+          height: MediaQuery.of(context).size.height,
+          width: MediaQuery.of(context).size.width,
+          color: oi.color,
+          padding: EdgeInsets.fromLTRB(20, 0, 20, 0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: <Widget>[
+              Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children:<Widget>[
+             TextButton(onPressed: null,child: Text('Skip',style: Theme.of(context).textTheme.headline5,),),
+             
                 ],
-                stops:<double>[0.9,1.0],
-                 ),
-            ),
-            
-          )
-        ],
-      ),
+              ),
+              HeroImage(
+                img: oi.image,
+                imgHeigth:  MediaQuery.of(context).size.height*0.3),
+  
+              Column(
+                  children:<Widget> [
+                  Text(oi.title,style:Theme.of(context).textTheme.headline1,),
+                  SizedBox(height: 20,),
+                  Text(oi.subtitle,style: Theme.of(context).textTheme.bodyText1,)
+                ],
+              ),
+              //child: Image.asset(oi.image)
+          ]),
+        );
+      }),
     );
   }
 }
