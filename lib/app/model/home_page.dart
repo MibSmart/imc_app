@@ -42,7 +42,25 @@ class HomePage extends StatelessWidget {
                   Text(oi.subtitle,style: Theme.of(context).textTheme.bodyText1,)
                 ],
               ),
-              //child: Image.asset(oi.image)
+
+
+               Container(
+                 width: MediaQuery.of(context).size.width,
+                 height: 10,
+                 child: ListView.builder(
+                   scrollDirection: Axis.horizontal,
+                   itemCount: totalPages,
+                   itemBuilder: (BuildContext context,int i){
+                      return Padding(
+                        padding: const EdgeInsets.all(2.0),
+                        child: Container(
+                          
+                          width: index==i ?40 : 20,
+                          
+                          color: Colors.white70)
+                          );
+                   }),
+               )
           ]),
         );
       }),
