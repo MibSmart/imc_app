@@ -21,6 +21,7 @@ class OnboardingItems{
   static List<OnboardingItem> loadOnboardingItem(){
     const fi = <OnboardingItem>[
       //paginas onboardig criadas 
+
       OnboardingItem(
         title: "Super Magro",
         subtitle: "não contém carne nem gordura",

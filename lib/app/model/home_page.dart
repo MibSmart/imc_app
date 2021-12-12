@@ -13,14 +13,18 @@ class HomePage extends StatelessWidget {
     int totalPages = OnboardingItems.loadOnboardingItem().length;
     return Scaffold(
       body: PageView.builder(
-          itemCount: totalPages, //contador de pages 
+          itemCount: totalPages, //contador de pages
           itemBuilder: (BuildContext context, int index) {
             OnboardingItem oi = OnboardingItems.loadOnboardingItem()[index];
             return Container(
-              
-              height: MediaQuery.of(context).size.height, // adequando as dimenões de cada deispositivo dinamicamente
+              // esse container chama as paginas com suas configurações
+
+              height: MediaQuery.of(context)
+                  .size
+                  .height, // adequando as dimenões de cada deispositivo dinamicamente
               width: MediaQuery.of(context).size.width,
-              color: oi.color,
+              color: oi
+                  .color, // aqui chama a cor de cada pagina criada no data.dart
               padding: EdgeInsets.fromLTRB(20, 0, 20, 0),
               child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -38,7 +42,7 @@ class HomePage extends StatelessWidget {
                       ],
                     ),
                     HeroImage(
-                        img: oi.image,
+                        img: oi.image, // aqui chama  a imgem
                         imgHeigth: MediaQuery.of(context).size.height * 0.3),
                     Column(
                       children: <Widget>[
