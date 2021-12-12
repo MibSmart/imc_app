@@ -13,11 +13,12 @@ class HomePage extends StatelessWidget {
     int totalPages = OnboardingItems.loadOnboardingItem().length;
     return Scaffold(
       body: PageView.builder(
-          itemCount: totalPages,
+          itemCount: totalPages, //contador de pages 
           itemBuilder: (BuildContext context, int index) {
             OnboardingItem oi = OnboardingItems.loadOnboardingItem()[index];
             return Container(
-              height: MediaQuery.of(context).size.height,
+              
+              height: MediaQuery.of(context).size.height, // adequando as dimenões de cada deispositivo dinamicamente
               width: MediaQuery.of(context).size.width,
               color: oi.color,
               padding: EdgeInsets.fromLTRB(20, 0, 20, 0),

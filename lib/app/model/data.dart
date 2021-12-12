@@ -1,7 +1,7 @@
 // ignore_for_file: unused_import, empty_constructor_bodies
 
 import 'package:flutter/material.dart';
-
+//classe e construtor para descrição e conteudo das paginas 
 class OnboardingItem{
   final String title;
   final String subtitle;
@@ -20,6 +20,7 @@ class OnboardingItem{
 class OnboardingItems{
   static List<OnboardingItem> loadOnboardingItem(){
     const fi = <OnboardingItem>[
+      //paginas onboardig criadas 
       OnboardingItem(
         title: "Super Magro",
         subtitle: "não contém carne nem gordura",
