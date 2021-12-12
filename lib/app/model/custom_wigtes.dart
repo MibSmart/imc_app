@@ -25,7 +25,7 @@ class CustomButton extends StatelessWidget {
   final VoidCallback  btnFN;
   
 
- 
+ // função do botão get started 
   CustomButton({required this.btnText, required this.btnFN});
   @override
   Widget build(BuildContext context) {
