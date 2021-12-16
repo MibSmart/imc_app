@@ -13,7 +13,7 @@ class AppWidget extends StatefulWidget {
 
 class _AppWidgetState extends State<AppWidget> {
   Future<void> hideScreen() async {
-    await Future.delayed(Duration(seconds: 5), () async {
+    await Future.delayed(Duration(seconds: 3), () async {
       Navigator.pushNamed(context, "/inputPage");
       // Get.offAll(MainButtonNavigatorBar()
       // );
@@ -44,10 +44,10 @@ class _AppWidgetState extends State<AppWidget> {
             fontSize: 80.0,
             fontWeight: FontWeight.bold,
           ),
-          loadDuration: Duration(seconds: 3),
-          waveDuration: Duration(seconds: 3),
-          boxHeight: 600.0,
-          boxWidth: 600.0,
+          loadDuration: Duration(seconds: 2),
+          waveDuration: Duration(seconds: 2),
+          boxHeight: MediaQuery.of(context).size.height,
+          boxWidth: MediaQuery.of(context).size.width,
         ),
       ),
     );
