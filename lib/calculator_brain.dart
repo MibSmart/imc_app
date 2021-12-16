@@ -24,6 +24,12 @@ class CalculatorBrain {
   }
 
   String getInterpretation() {
-    return "";
+    if (_bmi >= 25) {
+      return "Você tem um peso corporal maior do que o normal. Tente se exercitar mais.";
+    } else if (_bmi > 18.5) {
+      return "Você tem um peso corporal normal. Bom trabalho!";
+    } else {
+      return "Você tem um peso corporal menor do que o normal. Você pode comer um pouco mais.";
+    }
   }
 }

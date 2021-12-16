@@ -30,9 +30,11 @@ class ResultsPage extends StatelessWidget {
             child: Container(
               padding: EdgeInsets.all(15.0),
               alignment: Alignment.bottomLeft,
-              child: Text(
-                "Seu resultado",
-                style: kTitleTextStyle,
+              child: Center(
+                child: Text(
+                  "RESULTADO",
+                  style: kTitleTextStyle,
+                ),
               ),
             ),
           ),
@@ -59,10 +61,11 @@ class ResultsPage extends StatelessWidget {
                   ),
                 ],
               ),
+              onPress: () {},
             ),
           ),
           BottomButton(
-            buttonTitle: 'Novo cálculo',
+            buttonTitle: 'NOVO CÁLCULO',
             onTap: () {
               Navigator.pop(context);
             },

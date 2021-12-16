@@ -3,9 +3,14 @@
 import 'package:flutter/material.dart';
 
 const kBottomContainerHeight = 80.0;
-const kActiveCardColor = Color(0xFF1D1e33);
-const kInactiveCardcolor = Color(0xFF111328);
-const kBottomContainerColor = Color(0xFFEB1555);
+const kActiveCardColor = Colors.white;
+const kActiveCardColor1 = Color(0xFF90e0ef);
+const kBottomContainerColor = Colors.blue;
+
+const kBbottomContainerHeight = 60.0;
+const kAppBackgroundColor = Color(0xff0a0e21);
+const kAppTextColor = Color(0xFF8d8e98);
+const kInactiveCardColor = Colors.blue;
 
 final kHintTextStyle = TextStyle(
   color: Colors.grey[600],
@@ -58,10 +63,8 @@ const kNumberTextStyle = TextStyle(
   fontWeight: FontWeight.w900,
 );
 
-const kLargeButtonTextSty = TextStyle(
-  fontSize: 25.0,
-  fontWeight: FontWeight.bold,
-);
+const kLargeButtonTextSty =
+    TextStyle(fontSize: 25.0, fontWeight: FontWeight.bold, color: Colors.white);
 
 const kTitleTextStyle = TextStyle(
   fontSize: 50.0,
@@ -81,4 +84,19 @@ const kBMItextStyle = TextStyle(
 
 const kBodyTextStyle = TextStyle(
   fontSize: 22.0,
+);
+
+const kInfoPageTitle = TextStyle(
+  fontSize: 22.0,
+  color: Colors.white,
+  fontWeight: FontWeight.w400,
+);
+
+const kInfoTextTitle = TextStyle(
+  fontSize: 30,
+  fontFamily: "Oswald",
+);
+const kInfoPageMainText = TextStyle(
+  fontSize: 25.0,
+  fontFamily: "JosefinSans",
 );

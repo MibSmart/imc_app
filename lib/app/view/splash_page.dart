@@ -9,7 +9,7 @@ class SplashPage extends StatelessWidget {
       Duration(seconds: 3),
     ).then((value) {
       CircularProgressIndicator();
-      Navigator.pushNamed(context, "/homePage");
+      Navigator.pushNamed(context, "/inputPage");
     });
 
     return Scaffold(

@@ -6,6 +6,7 @@ import 'package:imc_app/app/components/reusable_card.dart';
 import 'package:imc_app/app/components/round_icon.dart';
 import 'package:imc_app/app/model/constants.dart';
 import 'package:imc_app/app/model/enum_gender.dart';
+import 'dart:async';
 
 import '../../calculator_brain.dart';
 import 'results_page.dart';
@@ -18,7 +19,7 @@ class InputPage extends StatefulWidget {
 }
 
 class _InputPageState extends State<InputPage> {
-  late Gender selectedGender;
+  Gender? selectedGender;
   int height = 180;
   int weight = 60;
   int age = 18;
@@ -42,10 +43,10 @@ class _InputPageState extends State<InputPage> {
                       });
                     },
                     color: selectedGender == Gender.male
-                        ? kActiveCardColor
-                        : kInactiveCardcolor,
+                        ? kActiveCardColor1
+                        : kInactiveCardColor,
                     cardChild: IconContent(
-                      icon: FontAwesomeIcons.mars,
+                      icon: FontAwesomeIcons.male,
                       label: "Homem",
                     ),
                   ),
@@ -58,10 +59,10 @@ class _InputPageState extends State<InputPage> {
                       });
                     },
                     color: selectedGender == Gender.female
-                        ? kActiveCardColor
-                        : kInactiveCardcolor,
+                        ? kActiveCardColor1
+                        : kInactiveCardColor,
                     cardChild: IconContent(
-                      icon: FontAwesomeIcons.venus,
+                      icon: FontAwesomeIcons.female,
                       label: "Mulher",
                     ),
                   ),
@@ -99,7 +100,7 @@ class _InputPageState extends State<InputPage> {
                       thumbColor: Color(0xFFEB1555),
                       overlayColor: Color(0x29EB1555),
                       activeTrackColor: Colors.white,
-                      inactiveTrackColor: Color(0xFF8D8E98),
+                      inactiveTrackColor: Colors.green,
                       thumbShape:
                           RoundSliderThumbShape(enabledThumbRadius: 15.0),
                       overlayShape:
@@ -109,7 +110,7 @@ class _InputPageState extends State<InputPage> {
                       value: height.toDouble(),
                       min: 120.0,
                       max: 220.0,
-                      activeColor: Color(0xFFEB1555),
+                      activeColor: Colors.blue,
                       inactiveColor: Color(0xFF8D8E98),
                       onChanged: (double newValue) {
                         setState(() {
@@ -120,6 +121,7 @@ class _InputPageState extends State<InputPage> {
                   )
                 ],
               ),
+              onPress: () {},
             ),
           ),
           Expanded(
@@ -165,6 +167,7 @@ class _InputPageState extends State<InputPage> {
                         )
                       ],
                     ),
+                    onPress: () {},
                   ),
                 ),
                 Expanded(
@@ -207,6 +210,7 @@ class _InputPageState extends State<InputPage> {
                         )
                       ],
                     ),
+                    onPress: () {},
                   ),
                 ),
               ],
@@ -227,7 +231,7 @@ class _InputPageState extends State<InputPage> {
                 ),
               );
             },
-            buttonTitle: "Calcular",
+            buttonTitle: "CALCULAR",
           ),
         ],
       ),
