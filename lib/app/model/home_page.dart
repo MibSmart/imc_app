@@ -47,6 +47,7 @@ class _HomePageState extends State<HomePage> {
                 child: ElevatedButton(
                   onPressed: () {
                     print('Pressed');
+                    Navigator.pushNamed(context, "/appWidget");
                   },
                   child: Text('Calcular'),
                   style: ElevatedButton.styleFrom(
