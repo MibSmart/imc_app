@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:imc_app/app/model/home_page.dart';
+import 'package:imc_app/app/model/input_page.dart';
 import 'app/model/constants.dart';
 import 'app/view/splash_page.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
@@ -15,6 +17,7 @@ class _AppWidgetState extends State<AppWidget> {
   Future<void> hideScreen() async {
     await Future.delayed(Duration(seconds: 3), () async {
       Navigator.pushNamed(context, "/inputPage");
+     InputPage();
       // Get.offAll(MainButtonNavigatorBar()
       // );
     });

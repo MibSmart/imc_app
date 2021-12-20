@@ -14,7 +14,7 @@ class _InfoPageState extends State<InfoPage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          "Info About App",
+          "Info Sobre App",
           style: kTitleTextStyle,
         ),
         actions: [
@@ -52,7 +52,7 @@ class _InfoPageState extends State<InfoPage> {
                   Padding(
                     padding: EdgeInsets.only(left: 75),
                     child: Text(
-                      'BMI Calculator',
+                      'IMC Calculator',
                       style: kInfoTextTitle,
                     ),
                   ),

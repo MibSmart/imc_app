@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:imc_app/app/model/home_page.dart';
 import 'package:imc_app/app/model/input_page.dart';
 import 'package:imc_app/app/model/results_page.dart';
 import 'package:imc_app/app_widget.dart';
 import 'package:imc_app/calculator_brain.dart';
+import 'package:imc_app/app/model/home_page.dart';
 
 import 'splash_page.dart';
 
@@ -23,7 +25,7 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: Colors.grey[350],
       ),
       debugShowCheckedModeBanner: false,
-      //home: InputPage(),
+     // home: HomePage(),
 
       initialRoute: "/appWidget",
       routes: {
